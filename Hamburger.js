@@ -11,6 +11,8 @@ const Hamburger = ({ color, type, active, onPress }) => {
   const [marginLeft, setMarginLeft] = useState(new Animated.Value(0));
   const [width, setWidth] = useState(new Animated.Value(25));
 
+  
+
   const spinCross = () => {
     if (!active) {
       Animated.spring(containerAnim, { toValue: 1 }).start();
@@ -19,11 +21,11 @@ const Hamburger = ({ color, type, active, onPress }) => {
       Animated.spring(bottomBarMargin, { toValue: -10 }).start();
       Animated.spring(middleBarOpacity, { toValue: 0, duration: 30 }).start();
     } else {
-      setTopBar(0);
-      setBottomBar(0);
+      setTopBar(new Animated.Value(0));  // setTopBar ile güncelle
+      setBottomBar(new Animated.Value(0));  // setBottomBar ile güncelle
       setBottomBarMargin(4);
       setMiddleBarOpacity(1);
-
+  
       Animated.spring(containerAnim, { toValue: 0 }).start();
       Animated.spring(topBar, { toValue: 0 }).start();
       Animated.spring(bottomBar, { toValue: 0 }).start();
@@ -32,6 +34,7 @@ const Hamburger = ({ color, type, active, onPress }) => {
     }
   };
 
+  
   const cross = () => {
     if (!active) {
       Animated.spring(topBar, { toValue: 0.9 }).start();
@@ -39,18 +42,18 @@ const Hamburger = ({ color, type, active, onPress }) => {
       Animated.spring(bottomBarMargin, { toValue: -10 }).start();
       Animated.timing(middleBarOpacity, { toValue: 0, duration: 30 }).start();
     } else {
-      setTopBar(0);
-      setBottomBar(0);
+      setTopBar(new Animated.Value(0));  // setTopBar ile güncelle
+      setBottomBar(new Animated.Value(0));  // setBottomBar ile güncelle
       setBottomBarMargin(4);
       setMiddleBarOpacity(1);
-
+  
       Animated.spring(topBar, { toValue: 0 }).start();
       Animated.spring(bottomBar, { toValue: 0 }).start();
       Animated.spring(bottomBarMargin, { toValue: 4 }).start();
       Animated.timing(middleBarOpacity, { toValue: 1, duration: 1200 }).start();
     }
   };
-
+  
   const spinArrow = () => {
     if (!active) {
       Animated.spring(containerAnim, { toValue: 1 }).start();
@@ -61,13 +64,13 @@ const Hamburger = ({ color, type, active, onPress }) => {
       Animated.spring(bottomBarMargin, { toValue: 2 }).start();
       Animated.spring(topBarMargin, { toValue: -2 }).start();
     } else {
-      setTopBar(0);
-      setBottomBar(0);
+      setTopBar(new Animated.Value(0));  // setTopBar ile güncelle
+      setBottomBar(new Animated.Value(0));  // setBottomBar ile güncelle
       setWidth(25);
       setMarginLeft(0);
       setBottomBarMargin(4);
       setTopBarMargin(0);
-
+  
       Animated.spring(containerAnim, { toValue: 0 }).start();
       Animated.spring(topBar, { toValue: 0 }).start();
       Animated.spring(bottomBar, { toValue: 0 }).start();
@@ -77,7 +80,7 @@ const Hamburger = ({ color, type, active, onPress }) => {
       Animated.spring(topBarMargin, { toValue: 0 }).start();
     }
   };
-
+  
   const arrow = () => {
     if (!active) {
       Animated.spring(topBar, { toValue: 1 }).start();
@@ -87,13 +90,13 @@ const Hamburger = ({ color, type, active, onPress }) => {
       Animated.spring(bottomBarMargin, { toValue: 2 }).start();
       Animated.spring(topBarMargin, { toValue: -2 }).start();
     } else {
-      setTopBar(0);
-      setBottomBar(0);
+      setTopBar(new Animated.Value(0));  // setTopBar ile güncelle
+      setBottomBar(new Animated.Value(0));  // setBottomBar ile güncelle
       setWidth(25);
       setMarginLeft(0);
       setBottomBarMargin(4);
       setTopBarMargin(0);
-
+  
       Animated.spring(topBar, { toValue: 0 }).start();
       Animated.spring(bottomBar, { toValue: 0 }).start();
       Animated.spring(width, { toValue: 25 }).start();
