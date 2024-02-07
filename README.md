@@ -1,4 +1,4 @@
-# react-native-animated-hamburger
+# tavukburger
 Animated fully configurable hamburger menu for react-native!
 ![alt tag](gif/hamburger.gif)
 
@@ -7,18 +7,18 @@ Animated fully configurable hamburger menu for react-native!
 ## Installation
 NPM
 ```bash
-npm install react-native-animated-hamburger --save
+npm install tavukburger --save
 ```
 
 Yarn
 ```bash
-yarn add react-native-animated-hamburger
+yarn add tavukburger
 ```
 
 ## Usage
 ```javascript
 ...
-import Hamburger from 'react-native-animated-hamburger';
+import Hamburger from 'tavukburger';
 ...
 <Hamburger type="cross" active={this.state.active} onPress={() => {
               this.setState({ active: !this.state.active })

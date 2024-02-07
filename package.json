@@ -1,5 +1,5 @@
 {
-  "name": "react-native-tavukburger",
+  "name": "tavukburger",
   "version": "0.0.2",
   "description": "Hamburger menu for react-native!",
   "main": "index.js",
@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+ssh://git@github.com/azeemhassni/react-native-animated-hamburger.git"
+    "url": "git+ssh://git@github.com/cemalkuller/tavukburger.git"
   },
   "keywords": [
     "react-native",
@@ -17,7 +17,7 @@
   "author": "Cemal Küller",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/azeemhassni/react-native-animated-hamburger/issues"
+    "url": "https://github.com/cemalkuller/tavukburger/issues"
   },
-  "homepage": "https://github.com/azeemhassni/react-native-animated-hamburger#readme"
+  "homepage": "https://github.com/cemalkuller/tavukburger#readme"
 }
